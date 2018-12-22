@@ -4,11 +4,20 @@ public class Member {
 
 //    사용자가 갖는 고유 정보
     private String name;
-    private  String address;
+    private String address;
 
 //    차후에 이런식으로 활용
 
     private  String profileImageUrl;
+
+//    생성자를 이용해 이름과 주소와 url 을 한꺼번에 입력하자
+    public Member(String name,String address, String profileImageUrl){
+        this.name = name;
+        this.address = address;
+        this. profileImageUrl = profileImageUrl;
+
+
+    }
 
 //    각 변수의 값을 조회 or 세팅 하는 getter & setter
 
