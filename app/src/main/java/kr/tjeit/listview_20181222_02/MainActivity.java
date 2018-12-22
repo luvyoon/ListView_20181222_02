@@ -7,6 +7,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.tjeit.listview_20181222_02.adapters.MemberAdapter;
 import kr.tjeit.listview_20181222_02.datas.Member;
 
 public class MainActivity extends BaseActivity {
@@ -15,6 +16,8 @@ public class MainActivity extends BaseActivity {
     List<Member> memberList = new ArrayList<Member>();
 
     ListView memberListView;
+    MemberAdapter memberAdapter;
+
 
 
     @Override
@@ -36,6 +39,10 @@ public class MainActivity extends BaseActivity {
     public void setValues() {
 //        실제로 멤버 목록을 채움.
         fillMembers();
+
+        memberAdapter = new MemberAdapter(mContext, memberList);
+
+        memberListView.setAdapter(memberAdapter);
 
     }
 
